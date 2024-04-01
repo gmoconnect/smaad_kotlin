@@ -137,7 +137,7 @@ public class SmaAdWebView extends WebView {
     }
 
     public void ShowWebView(){
-        String url = String.format("https://offerwall.stg.smaad.net/wall/%s?u=%s", this.mediaId, this.userParameter);
+        String url = String.format("https://wall.smaad.net/wall/%s?u=%s", this.mediaId, this.userParameter);
         super.loadUrl(url);
     }
 
