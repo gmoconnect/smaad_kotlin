@@ -119,7 +119,7 @@ public class SmaAdWebView extends WebView {
         init(context);
     }
 
-    public void Initialize(final Activity activity, final Listener listener, String mediaId, String userParameter){
+    public void Initialize(final Activity activity, final Listener listener, String zoneId, String userParameter){
         if (activity != null) {
             mActivity = new WeakReference<Activity>(activity);
         }
@@ -132,7 +132,7 @@ public class SmaAdWebView extends WebView {
 //    addJavascriptInterface(javaScriptBridgeInterface, JavaScriptBridgeJS.JAVASCRIPT_BRIDGE_NAME);
         addJavascriptInterface(this.javaScriptBridgeInterface, "Android");
 
-        this.zoneId = mediaId;
+        this.zoneId = zoneId;
         this.userParameter = userParameter;
     }
 
