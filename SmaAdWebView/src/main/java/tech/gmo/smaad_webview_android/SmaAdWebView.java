@@ -99,7 +99,7 @@ public class SmaAdWebView extends WebView {
     protected String mUploadableFileTypes = "*/*";
     protected final Map<String, String> mHttpHeaders = new HashMap<String, String>();
 
-    private String mediaId;
+    private String zoneId;
     private String userParameter;
     @Nullable
     public JavaScriptBridgeInterface javaScriptBridgeInterface;
@@ -132,12 +132,12 @@ public class SmaAdWebView extends WebView {
 //    addJavascriptInterface(javaScriptBridgeInterface, JavaScriptBridgeJS.JAVASCRIPT_BRIDGE_NAME);
         addJavascriptInterface(this.javaScriptBridgeInterface, "Android");
 
-        this.mediaId = mediaId;
+        this.zoneId = mediaId;
         this.userParameter = userParameter;
     }
 
     public void ShowWebView(){
-        String url = String.format("https://wall.smaad.net/wall/%s?u=%s", this.mediaId, this.userParameter);
+        String url = String.format("https://wall.smaad.net/wall/%s?u=%s", this.zoneId, this.userParameter);
         super.loadUrl(url);
     }
 

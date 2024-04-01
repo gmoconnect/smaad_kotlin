@@ -39,7 +39,7 @@ afterEvaluate {
             create("release", MavenPublication::class.java) {
                 groupId = "com.github.gmoconnect"
                 artifactId = "smaad_kotlin"
-                version = "1.0.1"
+                version = "1.0.2"
                 artifact("$buildDir/outputs/aar/SmaAdWebView-release.aar")
             }
         }
